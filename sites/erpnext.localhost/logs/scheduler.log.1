@@ -1,0 +1,1423 @@
+2025-04-22 05:00:01,115 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 117, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 161, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 174, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/alevason/eval/apps/frappe/frappe/database/database.py", line 887, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/model/meta.py", line 85, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/model/meta.py", line 148, in __init__
+    super().__init__("DocType", doctype)
+  File "/home/alevason/eval/apps/frappe/frappe/model/document.py", line 170, in __init__
+    self._init_dispatch(args[0], *args[1:], **kwargs)
+  File "/home/alevason/eval/apps/frappe/frappe/model/document.py", line 194, in _init_dispatch
+    return self._init_known_doc(arg, name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/model/document.py", line 187, in _init_known_doc
+    self.load_from_db()
+  File "/home/alevason/eval/apps/frappe/frappe/model/meta.py", line 154, in load_from_db
+    super().load_from_db()
+  File "/home/alevason/eval/apps/frappe/frappe/model/document.py", line 258, in load_from_db
+    frappe.throw(
+  File "/home/alevason/eval/apps/frappe/frappe/utils/messages.py", line 145, in throw
+    msgprint(
+  File "/home/alevason/eval/apps/frappe/frappe/utils/messages.py", line 106, in msgprint
+    _raise_exception()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/messages.py", line 57, in _raise_exception
+    raise exc
+frappe.exceptions.DoesNotExistError: DocType System Settings not found
+2025-04-22 20:32:00,816 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,381 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,383 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,387 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,399 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,403 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,416 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,420 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,432 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,435 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,439 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,451 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,465 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,483 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,485 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_offset_alerts because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,501 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,505 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,518 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-22 20:32:01,521 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,450 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,586 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,588 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,589 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,592 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,594 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,596 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,597 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,599 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,600 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,602 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,603 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for erpnext.localhost
+2025-04-22 21:15:59,604 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,613 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,614 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,616 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,617 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,618 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,620 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,621 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,623 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,625 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,628 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,630 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,632 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for erpnext.localhost
+2025-04-22 21:16:00,634 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-22 22:48:00,913 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_offset_alerts because it was found in queue for erpnext.localhost
+2025-04-22 22:48:00,924 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for erpnext.localhost
+2025-04-22 22:48:00,927 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-22 22:48:00,934 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-22 23:32:00,299 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for erpnext.localhost
+2025-04-22 23:32:00,303 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for erpnext.localhost
+2025-04-23 00:31:59,810 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for erpnext.localhost
+2025-04-23 00:31:59,819 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for erpnext.localhost
+2025-04-23 00:31:59,825 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-23 00:31:59,828 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-23 10:48:00,165 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-23 10:48:00,173 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-23 10:48:00,184 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for erpnext.localhost
+2025-04-23 22:56:00,877 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,358 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,359 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,361 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,363 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,366 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_offset_alerts because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,368 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,369 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,372 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,376 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,379 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,381 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,383 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,384 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,386 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,388 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for erpnext.localhost
+2025-04-23 22:56:01,390 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for erpnext.localhost
+2025-04-24 00:20:04,866 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:23:43,059 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:24:04,089 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:36:04,489 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:39:46,712 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:40:02,132 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:47:53,965 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:48:05,018 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:51:45,925 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-24 00:52:02,728 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:00:10,591 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:08:15,160 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:12:14,146 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:20:14,546 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:24:14,404 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.
+2025-04-25 04:28:14,487 ERROR scheduler Exception in Enqueue Events for Site erpnext.localhost
+Traceback (most recent call last):
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+  File "/home/alevason/eval/apps/frappe/frappe/utils/scheduler.py", line 140, in enqueue_events
+    if job_type.enqueue():
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 71, in enqueue
+    if not self.is_job_in_queue():
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/core/doctype/scheduled_job_type/scheduled_job_type.py", line 93, in is_job_in_queue
+    return is_job_enqueued(self.rq_job_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 654, in is_job_enqueued
+    return get_job_status(job_id) in (JobStatus.QUEUED, JobStatus.STARTED)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 659, in get_job_status
+    if job := get_job(job_id):
+              ^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 665, in get_job
+    return Job.fetch(create_job_id(job_id), connection=get_redis_conn())
+                                                       ^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 579, in get_redis_conn
+    return get_redis_connection_without_auth()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/background_jobs.py", line 601, in get_redis_connection_without_auth
+    _redis_queue_conn = RedisQueue.get_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/apps/frappe/frappe/utils/redis_queue.py", line 36, in get_connection
+    conn.ping()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/alevason/eval/env/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.

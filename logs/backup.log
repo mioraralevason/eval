@@ -1,0 +1,42 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250422_040003-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-22 04:00:07.206404
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_040003-erpnext_localhost-site_config_backup.json 127.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_040003-erpnext_localhost-database.sql.gz 796.9KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250422_100003-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-22 10:00:21.371627
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_100003-erpnext_localhost-site_config_backup.json 127.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_100003-erpnext_localhost-database.sql.gz 798.8KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250422_160002-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-22 16:00:06.415645
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_160002-erpnext_localhost-site_config_backup.json 127.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_160002-erpnext_localhost-database.sql.gz 798.8KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250422_220001-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-22 22:00:06.136386
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_220001-erpnext_localhost-site_config_backup.json 206.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250422_220001-erpnext_localhost-database.sql.gz 816.8KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250423_040001-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-23 04:00:04.658187
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_040001-erpnext_localhost-site_config_backup.json 206.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_040001-erpnext_localhost-database.sql.gz 836.3KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250423_100001-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-23 10:00:04.745072
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_100001-erpnext_localhost-site_config_backup.json 206.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_100001-erpnext_localhost-database.sql.gz 851.0KiB
+Backup for Site erpnext.localhost has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_e24a558a144d987c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _e24a558a144d987c | /usr/bin/gzip >> ./erpnext.localhost/private/backups/20250423_220005-erpnext_localhost-database.sql.gz
+
+Backup Summary for erpnext.localhost at 2025-04-23 22:00:10.877098
+Config  : /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_220005-erpnext_localhost-site_config_backup.json 206.0B
+Database: /home/alevason/eval/sites/erpnext.localhost/private/backups/20250423_220005-erpnext_localhost-database.sql.gz 852.0KiB
+Backup for Site erpnext.localhost has been successfully completed

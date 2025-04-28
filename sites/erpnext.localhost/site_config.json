@@ -1,0 +1,14 @@
+{
+ "db_name": "_e24a558a144d987c",
+ "db_password": "i9TsMvq5Pv2lPjOk",
+ "db_type": "mariadb",
+ "db_user": "_e24a558a144d987c",
+ "developer_mode": 1,
+ "disable_website": 0,
+ "disable_server_script_auth": 1,
+ "jwt_secret" : "H7d5FDsq9LmAkP3TzR8WbE2xYvN6jC1oI4gU0pQnXyJZcVfBhM5SlO7iKaGu3wDtE9r2sF0qL8mN6bV4xZ7yHpW1jI3oA2cK5dR9eS",
+ "redis_cache": "redis://127.0.0.1:13000",
+ "redis_queue": "redis://127.0.0.1:11000",
+ "redis_socketio": "redis://127.0.0.1:13000",
+ "log_level": "DEBUG"
+}

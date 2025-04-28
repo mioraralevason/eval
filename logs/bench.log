@@ -1,0 +1,190 @@
+2025-04-22 04:40:11,887 DEBUG cd eval && python3 -m venv env
+2025-04-22 04:40:20,867 DEBUG cd eval && /home/alevason/eval/env/bin/python -m pip install --quiet --upgrade pip
+2025-04-22 04:40:25,480 DEBUG cd eval && /home/alevason/eval/env/bin/python -m pip install --quiet wheel
+2025-04-22 04:40:29,457 LOG Getting frappe
+2025-04-22 04:40:29,457 DEBUG cd eval/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2025-04-22 04:51:17,651 LOG Installing frappe
+2025-04-22 04:51:17,675 DEBUG cd /home/alevason/eval && /home/alevason/eval/env/bin/python -m pip install --quiet --upgrade -e /home/alevason/eval/apps/frappe 
+2025-04-22 04:53:32,513 DEBUG cd /home/alevason/eval/apps/frappe && yarn install --check-files
+2025-04-22 04:54:49,623 DEBUG cd eval && bench build
+2025-04-22 04:54:51,195 INFO /home/alevason/.local/bin/bench build
+2025-04-22 04:55:58,880 LOG setting up backups
+2025-04-22 04:55:59,040 LOG backups were set up
+2025-04-22 04:55:59,040 INFO Bench eval initialized
+2025-04-22 04:58:01,768 INFO /home/alevason/.local/bin/bench start
+2025-04-22 04:58:03,271 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 04:58:03,318 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 04:58:03,349 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 04:58:03,409 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 04:59:28,770 INFO /home/alevason/.local/bin/bench new-site erpnext.localhost
+2025-04-22 05:04:11,669 INFO /home/alevason/.local/bin/bench get-app https://github.com/frappe/erpnext
+2025-04-22 05:04:11,680 LOG Getting erpnext
+2025-04-22 05:04:11,681 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext  --depth 1 --origin upstream
+2025-04-22 05:07:57,299 LOG Installing erpnext
+2025-04-22 05:07:57,300 DEBUG cd /home/alevason/eval && /home/alevason/eval/env/bin/python -m pip install --quiet --upgrade -e /home/alevason/eval/apps/erpnext 
+2025-04-22 05:08:20,859 DEBUG cd /home/alevason/eval/apps/erpnext && yarn install --check-files
+2025-04-22 05:08:22,020 DEBUG bench build --app erpnext
+2025-04-22 05:08:22,271 INFO /home/alevason/.local/bin/bench build --app erpnext
+2025-04-22 05:12:38,162 INFO /home/alevason/.local/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 05:19:15,320 INFO /home/alevason/.local/bin/bench start
+2025-04-22 05:19:16,438 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 05:19:16,518 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 05:19:16,771 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 05:19:16,828 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:00:01,819 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-22 06:06:46,312 INFO /home/alevason/.local/bin/bench start
+2025-04-22 06:06:47,562 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 06:06:47,946 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:06:47,998 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 06:06:48,070 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 06:09:56,081 INFO /home/alevason/.local/bin/bench start
+2025-04-22 06:09:57,285 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:09:57,449 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 06:09:57,462 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 06:09:57,481 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 06:10:10,337 INFO /home/alevason/.local/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 06:10:18,278 INFO /home/alevason/.local/bin/bench start
+2025-04-22 06:10:18,899 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 06:10:18,901 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:10:18,928 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 06:10:19,034 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 06:17:49,039 INFO /home/alevason/.local/bin/bench start
+2025-04-22 06:17:50,074 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 06:17:50,318 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 06:17:50,340 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 06:17:50,510 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:19:41,843 INFO /home/alevason/.local/bin/bench start
+2025-04-22 06:19:42,464 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 06:19:42,844 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 06:19:43,075 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 06:19:43,213 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 06:22:02,272 INFO /home/alevason/.local/bin/bench --site erpnext.localhost erpnext
+2025-04-22 06:22:13,943 INFO /home/alevason/.local/bin/bench --site erpnext.localhost install-app erpnext
+2025-04-22 08:24:10,081 INFO /home/alevason/.local/bin/bench start
+2025-04-22 08:24:11,298 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 08:24:11,319 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 08:24:11,325 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 08:24:11,325 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 11:16:02,390 INFO /home/alevason/.local/bin/bench start
+2025-04-22 11:16:03,708 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 11:16:03,718 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 11:16:03,754 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 11:16:03,765 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 11:25:20,710 INFO /home/alevason/.local/bin/bench start
+2025-04-22 11:25:21,719 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 11:25:21,937 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 11:25:22,044 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 11:25:22,140 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 11:38:14,473 INFO /home/alevason/.local/bin/bench start
+2025-04-22 11:38:14,981 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 11:38:15,141 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 11:38:15,144 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 11:38:15,198 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 11:56:18,176 INFO /home/alevason/.local/bin/bench start
+2025-04-22 11:56:18,796 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 11:56:18,852 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 11:56:18,877 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 11:56:18,906 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 12:00:02,115 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-22 18:00:00,653 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-22 20:30:50,249 INFO /home/alevason/.local/bin/bench start
+2025-04-22 20:30:50,974 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 20:30:50,988 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 20:30:51,012 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 20:30:51,078 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 21:12:05,506 INFO /home/alevason/.local/bin/bench start
+2025-04-22 21:12:06,680 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 21:12:06,695 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 21:12:06,697 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 21:12:06,706 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:26:39,837 INFO /home/alevason/.local/bin/bench start
+2025-04-22 22:26:40,874 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 22:26:40,952 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 22:26:41,045 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:26:41,066 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 22:37:14,093 INFO /home/alevason/.local/bin/bench restart
+2025-04-22 22:37:18,091 INFO /home/alevason/.local/bin/bench start
+2025-04-22 22:37:19,026 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 22:37:19,104 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 22:37:19,118 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:37:19,240 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 22:41:55,738 INFO /home/alevason/.local/bin/bench start
+2025-04-22 22:41:56,220 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 22:41:56,268 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 22:41:56,457 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 22:41:56,644 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:44:04,414 INFO /home/alevason/.local/bin/bench start
+2025-04-22 22:44:05,011 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:44:05,038 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 22:44:05,220 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 22:44:05,256 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 22:47:05,323 INFO /home/alevason/.local/bin/bench start
+2025-04-22 22:47:06,055 INFO /home/alevason/.local/bin/bench worker
+2025-04-22 22:47:06,306 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 22:47:06,312 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 22:47:06,414 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 23:16:08,603 INFO /home/alevason/.local/bin/bench start
+2025-04-22 23:16:18,451 INFO /home/alevason/.local/bin/bench start
+2025-04-22 23:17:05,235 INFO /home/alevason/.local/bin/bench start
+2025-04-22 23:17:09,664 INFO /home/alevason/.local/bin/bench restart
+2025-04-22 23:17:12,353 INFO /home/alevason/.local/bin/bench start
+2025-04-22 23:18:06,451 INFO /home/alevason/.local/bin/bench restart
+2025-04-22 23:29:33,610 INFO /home/alevason/.local/bin/bench start
+2025-04-22 23:29:34,193 INFO /home/alevason/.local/bin/bench watch
+2025-04-22 23:29:34,202 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-22 23:29:34,205 INFO /home/alevason/.local/bin/bench schedule
+2025-04-22 23:29:34,214 INFO /home/alevason/.local/bin/bench worker
+2025-04-23 00:00:00,457 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-23 06:00:00,682 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-23 10:42:42,246 INFO /home/alevason/.local/bin/bench start
+2025-04-23 10:42:43,059 INFO /home/alevason/.local/bin/bench schedule
+2025-04-23 10:42:43,252 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-23 10:42:43,290 INFO /home/alevason/.local/bin/bench worker
+2025-04-23 10:42:43,361 INFO /home/alevason/.local/bin/bench watch
+2025-04-23 12:00:00,761 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-23 22:54:44,423 INFO /home/alevason/.local/bin/bench start
+2025-04-23 22:54:45,699 INFO /home/alevason/.local/bin/bench worker
+2025-04-23 22:54:45,704 INFO /home/alevason/.local/bin/bench watch
+2025-04-23 22:54:45,711 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-23 22:54:45,723 INFO /home/alevason/.local/bin/bench schedule
+2025-04-24 00:00:02,040 INFO /home/alevason/.local/bin/bench --verbose --site all backup
+2025-04-24 00:05:30,858 INFO /home/alevason/.local/bin/bench start
+2025-04-24 00:05:31,441 INFO /home/alevason/.local/bin/bench schedule
+2025-04-24 00:05:31,449 INFO /home/alevason/.local/bin/bench watch
+2025-04-24 00:05:31,454 INFO /home/alevason/.local/bin/bench worker
+2025-04-24 00:05:31,486 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-24 00:18:37,815 INFO /home/alevason/.local/bin/bench start
+2025-04-24 00:18:38,659 INFO /home/alevason/.local/bin/bench watch
+2025-04-24 00:18:38,730 INFO /home/alevason/.local/bin/bench schedule
+2025-04-24 00:18:38,754 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-24 00:18:38,820 INFO /home/alevason/.local/bin/bench worker
+2025-04-24 00:35:32,632 INFO /home/alevason/.local/bin/bench start
+2025-04-24 00:35:33,340 INFO /home/alevason/.local/bin/bench worker
+2025-04-24 00:35:33,366 INFO /home/alevason/.local/bin/bench watch
+2025-04-24 00:35:33,368 INFO /home/alevason/.local/bin/bench schedule
+2025-04-24 00:35:33,370 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-24 00:45:53,722 INFO /home/alevason/.local/bin/bench start
+2025-04-24 00:45:54,493 INFO /home/alevason/.local/bin/bench worker
+2025-04-24 00:45:54,561 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-24 00:45:54,571 INFO /home/alevason/.local/bin/bench watch
+2025-04-24 00:45:54,612 INFO /home/alevason/.local/bin/bench schedule
+2025-04-25 03:56:03,203 INFO /home/alevason/.local/bin/bench start
+2025-04-25 03:56:04,604 INFO /home/alevason/.local/bin/bench watch
+2025-04-25 03:56:04,633 INFO /home/alevason/.local/bin/bench worker
+2025-04-25 03:56:04,637 INFO /home/alevason/.local/bin/bench schedule
+2025-04-25 03:56:04,645 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-25 03:57:45,004 INFO /home/alevason/.local/bin/bench start
+2025-04-25 03:57:45,601 INFO /home/alevason/.local/bin/bench watch
+2025-04-25 03:57:45,610 INFO /home/alevason/.local/bin/bench worker
+2025-04-25 03:57:45,611 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-25 03:57:45,702 INFO /home/alevason/.local/bin/bench schedule
+2025-04-25 04:03:57,309 INFO /home/alevason/.local/bin/bench start
+2025-04-25 04:03:57,828 INFO /home/alevason/.local/bin/bench schedule
+2025-04-25 04:03:57,886 INFO /home/alevason/.local/bin/bench watch
+2025-04-25 04:03:57,894 INFO /home/alevason/.local/bin/bench serve --port 8001
+2025-04-25 04:03:57,896 INFO /home/alevason/.local/bin/bench worker
+2025-04-25 04:15:57,671 INFO /home/alevason/.local/bin/bench start
+2025-04-25 04:15:59,157 INFO /home/alevason/.local/bin/bench schedule
+2025-04-25 04:15:59,285 INFO /home/alevason/.local/bin/bench worker
+2025-04-25 04:15:59,332 INFO /home/alevason/.local/bin/bench watch
+2025-04-25 04:15:59,395 INFO /home/alevason/.local/bin/bench serve --port 8001

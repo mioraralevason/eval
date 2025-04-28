@@ -1,0 +1,9 @@
+{
+ "db_name": "_e24a558a144d987c",
+ "db_password": "i9TsMvq5Pv2lPjOk",
+ "db_type": "mariadb",
+ "db_user": "_e24a558a144d987c",
+ "developer_mode": 1,
+ "disable_website": 0,
+ "disable_server_script_auth": 1
+}
